@@ -2,9 +2,9 @@
 #define NEANDER_H
 #define TAM_MEM 256 //Padrão do Neander
 
-#include <stdint.h> //Necessário para utilizarmos variáveis com 8 bits
+#include <stdint.h> //Necessário para utilizarmos variáveis com 8 bits                                                                              
 
-typedef{
+typedef struct{
     //Memória:
     uint8_t memoria[TAM_MEM]; 
     uint8_t memoriaOrig[TAM_MEM]; 
@@ -14,19 +14,19 @@ typedef{
     uint8_t pc;
 
     //Flags:
-    uint8_t flagNegativa;
-    uint8_t flagZero;
+    uint8_t flagNegativa;       
+    uint8_t flagZero;                       
 
     //Acessos e instruções:
-    uint32_t acessosMem;
-    uint32_t instruçõesExecutadas;
+    uint32_t acessosMem;                                                                                                                                                    ;
+    uint32_t instrucoesExecutadas;
 }neander;
 
-//Definição das funções:
-void iniciarNeander(neander *arg);
+//Definição das funções:   
+void iniciarNeander(neander *n);
 void executarPrograma(neander *programa);
-void printEstado(neander *arg, int modo); //"modo" deve ser hexa ou dec
+void printEstado(neander *n, int modoHex); 
 void printMemoria(uint8_t *mem, int modo);
-int carregarPrograma(neander *programa, const char *file);
+int carregarPrograma(neander *n, const char *file);
 
 #endif
