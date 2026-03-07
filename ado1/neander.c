@@ -119,4 +119,10 @@ void printEstado(neander *n, int modoHex){
         printf("Acumulador: %d\n", (int8_t)n -> acc);
         printf("Program counter: %d\n", n -> pc);
     }
+
+    printf("Flag negativa: %u\n", n -> flagNegativa);
+    printf("Flag zero: %u\n", n -> flagZero);
+    printf("Número de acessos a memória: %u\n", n -> acessosMem);
+    printf("Numero de instruções executadas: %u\n", n -> instrucoesExecutadas);
 }
+
