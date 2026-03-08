@@ -23,5 +23,14 @@ int main(int argc, char *argv[]){
     }
 
     printf("Memória antes: \n");
+    printMemoria(n.memoriaOrig, modoHex);
+
+    printf("Memória depois: \n");
     printMemoria(n.memoria, modoHex);
+
+    printEstado(&n, modoHex);
+
+    return 0;
+
+
 }
