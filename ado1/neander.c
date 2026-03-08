@@ -126,3 +126,16 @@ void printEstado(neander *n, int modoHex){
     printf("Numero de instruções executadas: %u\n", n -> instrucoesExecutadas);
 }
 
+void printMemoria(uint8_t *mem, int modo_hex) { 
+    for (int i = 0; i < TAM_MEM; i++) {
+
+        if (i % 16 == 0) //Mostra o endereço inicial do bloco de memória
+            printf("\n%03d: ", i);
+
+        if (modo_hex)
+            printf("%02X ", mem[i]);
+        else
+            printf("%03d ", mem[i]);
+    }
+    printf("\n");
+}

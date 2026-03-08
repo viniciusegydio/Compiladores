@@ -26,7 +26,7 @@ typedef struct{
 void iniciarNeander(neander *n);
 void executarPrograma(neander *programa);
 void printEstado(neander *n, int modoHex); 
-void printMemoria(uint8_t *mem, int modo);
+void printMemoria(uint8_t *mem, int modoHex);
 int carregarPrograma(neander *n, const char *file);
 
 #endif
