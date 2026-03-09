@@ -62,7 +62,7 @@ void executarPrograma(neander *n){
                 break;
             case 16: //STA
                 uint8_t address = lerMem(n, n -> pc++);
-                escreverMem(n, address);
+                escreverMem(n, address, n -> acc);
                 break;
             case 48: //ADD
                 uint8_t address = lerMem(n, n -> pc++);
